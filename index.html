@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlackJack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 id="title">Cards Game</h1>
+
+  <div class="card-container">
+    <img class="card card1" src="" width="100" />
+    <img class="card card2" src="" width="100" />
+    <img class="card card3" id="card3" src="" width="100" style="display: none;" />
+  </div>
+
+  <div class="button-container">
+    <button id="generate" onclick="generate()">GENERATE</button>
+    <button id="newcard" onclick="newcard()">NEW CARD</button>
+    <button id="retry" onclick="retry()">RETRY</button>
+    <button id="start" onclick="startgame()">START GAME</button>
+  </div>
+
+  <h1 id="message"></h1>
+  <audio id="music" src="./assets/playful-days-291189.mp3" loop></audio>
+  <video id="winnervideo" style="display:none;">
+     <source src="./assets/winner.mp4" type="video/mp4" >
+  </video>
+  <script src="index.js"></script>
+</body>
+</html>
