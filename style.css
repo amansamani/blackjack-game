@@ -1,7 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),url(./assets/patternpad-2025-04-13-23-13-56.svg);
@@ -12,7 +12,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 #winnervideo{
   position: fixed;
@@ -260,7 +262,7 @@ body {
 .dealerplayer-container{
   position: relative;
   width: 100%;
-  height: calc(100vh - 125px);
+  height: calc(100vh - 155px);
   padding: 20px;
   background-color: transparent;
 }
@@ -287,7 +289,7 @@ body {
   display: flex;
   gap: 3rem;
   justify-content: center;     
-  margin-top: 6rem;                                                                                                                                      
+  margin-top: 5rem;                                                                                                                                      
 }
 .player .card1 , .card2 , .card3{  
   display: flex;
@@ -298,12 +300,18 @@ body {
   height: 204px;
   border-radius: 1rem;
 }
-
+#result-text{
+  position: absolute;
+  top:20rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-align: center;
+}
 .dealername{
   position: absolute;
   top: 20px;
-  left: 20px;
-  padding: 5px 10px;
+  left: 2rem;
+  padding: 10px 10px;
   background-color: rgb(82, 82, 82);
   color: #ffffff;
   border-radius: 5px;
@@ -315,8 +323,8 @@ body {
 .dealerscore{
     position: absolute;
     top: 2rem; /* or adjust as needed */
-    right: 2rem; 
-    padding: 15px 15px;
+    right: 4rem; 
+    padding: 10px 10px;
     background-color: rgb(82, 82, 82);
     color: #ffffff;
     border-radius: 5px;
@@ -327,8 +335,9 @@ body {
   }
 .playername{
   position: absolute;
-  bottom: 15rem;
-  padding: 5px 10px;
+  left: 2rem;
+  bottom: 2rem;
+  padding: 10px 10px;
   background-color: rgb(82, 82, 82);
   color: #ffffff;
   border-radius: 5px;
@@ -339,9 +348,9 @@ body {
 }
 .playerscore{
   position: absolute;
-  bottom: 14rem;
-  right: 2rem; 
-  padding: 15px 15px;
+  bottom: 2rem;
+  right: 4rem;
+  padding: 10px 10px;
   background-color: rgb(82, 82, 82);
   color: #ffffff;
   border-radius: 5px;
@@ -356,7 +365,7 @@ body {
   position: absolute;
   bottom: 10px;
   display: flex;
-  gap: 2rem;
+  gap: 2.2rem;
   padding: 10px 20px;
   border-radius: 20px;
 }
@@ -383,11 +392,14 @@ body {
   font-size: 16px;
   transition-duration: .2s;
 }
+.bet-container button:hover{
+  background-color: rgb(148, 118, 255);
+}
 .coins-container{
   gap: 2rem;
   display: flex;
   position: relative;
-  left: 18rem;
+  left: 19rem;
 }
 .coins-container img{
   position: relative;
@@ -413,9 +425,32 @@ button:disabled {
 .bet-amount{
   color: white;
 }
-
 /* for mobile devices */
 @media (max-width:480px) {
+  .startgamebackground{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    z-index: 999;
+  }
+  .start-card {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 270px;
+    height: 300px;
+    padding: 20px;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: sans-serif;
+    z-index: 99999;
+  }
 
   .rulebox{
     width: 18rem;
@@ -431,24 +466,25 @@ button:disabled {
     z-index: 99;
 }
 #logo{
-   width: 48px;
-    height: 48px;
+   width: 52px;
+    height: 52px;
 }
 .nav-bar{
     position: relative;
     display: flex;
     gap: 30px;
     align-items: center;
+    padding: 10px 10px;
 }
 .rulebutton{
-  margin-top: 1rem;
+    margin-top: .6rem;
     margin-right: 1rem;
     padding: 5px 5px;
     border-radius: 6px;
     font-size: 10px;
 }
 .toggleSwitch {
-  margin-top: 1rem;
+  margin-top: .6rem;
   right: 1rem;
   width: 40px;
   height: 15px;
@@ -460,7 +496,7 @@ button:disabled {
 }
 .dealerplayer-container{
   width: 100vw;
-  height: calc(100vh - 75px);
+  height: 100vh;;
   padding: 60px;
   background-color: transparent;
 }
@@ -470,11 +506,12 @@ button:disabled {
   display: flex;
   gap: 1rem;
   justify-content: center;     
-  margin-top: .5rem;                                                                                                                                      
+  margin-top: 3rem;                                                                                                                                      
 }
 .dealer .card1 , .card2 , .card3{                                                             
-  width: 80px;
-  height: 120px;
+  width: 90px;
+  height: 130px;
+  padding: 5px 5px;
 }
 .player{
   left: 0;
@@ -485,66 +522,74 @@ button:disabled {
   margin-top: 4.5rem;                                                                                                                                      
 }
 .player .card1 , .card2 , .card3{  
-  width: 80px;
-  height: 120px;
+  width: 90px;
+  height: 130px;
+  padding: 5px 5px;
 }
 .dealername{
-  top: 30px;
-  left: 40px;
+  top: 4rem;
 }
 .dealerscore{
-    top: 30px;
-    right: 40px; 
-    padding: 10px 10px;
-    font-size: 13px;
+  top: 4rem;
+  right: 2rem;
   }
-.playername{
-  bottom: 9.5rem;
-}
-.playerscore{
-  bottom: 9.5rem;
-  right: 40px; 
-  padding: 10px 10px;
-  font-size: 13px;
-}
+  .playername {
+   position: relative;
+   top: 15rem;
+   left: -1.4rem;
+  }
+  .playerscore {
+  position: relative;
+   top: 15rem;
+   left: 6rem;
+  }
+  
 .container{
   gap: 1rem;
-  padding: 10px 20px;
+  padding: 110px 20px;
   border-radius: 20px;
 }
 .betamount-container{
-  top: 10px;
-  position: relative;
-}
-.bet-container{
+  bottom: 20rem;
   position: absolute;
-  right: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 20px;
-  gap: 20px; 
+  gap: 2rem;
 }
-.bet-container button{
-  padding: 5px 10px;
-  background-color: rgb(82, 82, 82);
-  color: #ffffff;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
+.betamount-container span {
+  margin: 0;
+  font-size: 18px;
+}
+.bet-container {
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 2px 2px;
+  font-size: 10px;
+}
+.bet-container button {
+  flex: 1 1 40%;
+  max-width: 50%;
   font-size: 16px;
-  transition-duration: .2s;
+}
+.bet-container button:hover{
+  background-color: rgb(148, 118, 255);
 }
 .coins-container{
-  gap: 2rem;
+  gap: 1rem;
   display: flex;
-  position: relative;
-  left: 18rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 90px;
 }
 .coins-container img{
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
   transition-duration: .2s;
 }
