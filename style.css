@@ -14,6 +14,7 @@ body {
     height: 100vh;
     margin: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
     width: 100%;
 }
 #winnervideo{
@@ -311,13 +312,13 @@ body {
   position: absolute;
   top: 20px;
   left: 2rem;
-  padding: 10px 10px;
+  padding: 12px 12px;
   background-color: rgb(82, 82, 82);
   color: #ffffff;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   transition-duration: .2s;
 }
 .dealerscore{
@@ -337,13 +338,13 @@ body {
   position: absolute;
   left: 2rem;
   bottom: 2rem;
-  padding: 10px 10px;
+  padding: 12px 12px;
   background-color: rgb(82, 82, 82);
   color: #ffffff;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   transition-duration: .2s;
 }
 .playerscore{
@@ -494,6 +495,13 @@ button:disabled {
   width: 20px;
   height: 20px;
 }
+#result-text{
+  position: absolute;
+  top:16rem;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
 .dealerplayer-container{
   width: 100vw;
   height: 100vh;;
@@ -528,6 +536,8 @@ button:disabled {
 }
 .dealername{
   top: 4rem;
+  font-size: 16px;
+  padding: 10px 10px;
 }
 .dealerscore{
   top: 4rem;
@@ -537,6 +547,8 @@ button:disabled {
    position: relative;
    top: 15rem;
    left: -1.4rem;
+   font-size: 16px;
+   padding: 10px 10px;
   }
   .playerscore {
   position: relative;
