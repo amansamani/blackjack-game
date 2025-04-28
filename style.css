@@ -505,7 +505,7 @@ button:disabled {
 .dealerplayer-container{
   width: 100vw;
   height: 100vh;;
-  padding: 60px;
+  padding: 70px;
   background-color: transparent;
 }
 .dealer{
@@ -517,8 +517,8 @@ button:disabled {
   margin-top: 3rem;                                                                                                                                      
 }
 .dealer .card1 , .card2 , .card3{                                                             
-  width: 90px;
-  height: 130px;
+  width: 100px;
+  height: 140px;
   padding: 5px 5px;
 }
 .player{
@@ -530,8 +530,8 @@ button:disabled {
   margin-top: 2.5rem;                                                                                                                                      
 }
 .player .card1 , .card2 , .card3{  
-  width: 90px;
-  height: 130px;
+  width: 100px;
+  height: 140px;
   padding: 5px 5px;
 }
 .dealername{
@@ -545,20 +545,20 @@ button:disabled {
   }
   .playername {
    position: relative;
-   top: 13rem;
+   top: 16rem;
    left: -1.4rem;
    font-size: 16px;
    padding: 10px 10px;
   }
   .playerscore {
   position: relative;
-   top: 13rem;
-   left: 7rem;
+   top: 16rem;
+   left: 8rem;
   }
   
 .container{
   gap: 1rem;
-  padding: 100px 20px;
+  padding: 130px 20px;
   border-radius: 20px;
 }
 .betamount-container{
@@ -603,6 +603,8 @@ button:disabled {
   width: 60px;
   height: 60px;
   cursor: pointer;
+  left:1rem;
+  margin-bottom: 1rem;
   transition-duration: .2s;
 }
 }
