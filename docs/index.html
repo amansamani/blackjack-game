@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlackJack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--<div class="startgamebackground" id="startgamebackground">
+  <div class="start-card" id="start-card">
+    <h2>Start Game</h2>
+    <input type="text" id="playerName" placeholder="Enter your name" required />
+    <button class="start-button" onclick="startgame()">Start</button>
+  </div>
+  </div>  -->
+  <header class="header">
+    <img id="logo" src="assets/logo.png" alt="">
+    <br>
+    <nav class="nav-bar">
+      <span class="rulebutton" id="rule-button" onclick="rulebutton()">RULE BOOK</span>
+      <input type="checkbox" id="checkboxInput" checked>
+      <label for="checkboxInput" class="toggleSwitch">
+        <img src="assets/up.svg" class="sound-on">
+        <img src="assets/mute.svg" alt="" class="sound-off">
+      </label>
+    </nav> 
+</header>
+<div class="rulebox" id="rulebox">
+  <button class="close-btn"  onclick="hiderule()">&times;</button>
+  <div class="card-details">
+    <p class="text-title">🂡 Blackjack Rules</p>
+    <p class="text-body">
+      <strong>🎯 Objective:</strong><br>
+      Beat the dealer by getting a hand value as close to <strong>21</strong> as possible without going over.
+    </p>
+
+    <p class="text-body">
+      <strong>🃏 Card Values:</strong><br>
+      • Number cards (2–9): Face value<br>
+      • Ace (10): 10 points<br>
+      • King (11): 11 points
+    </p>
+
+    <p class="text-body">
+      <strong>🎮 Gameplay:</strong><br>
+      1. Click a chip to place your <strong>bet</strong>.<br>
+      2. You and the dealer each receive two cards.<br>
+      3. One of the dealer's cards remains face down.<br>
+      4. Choose to <strong>"Hit"</strong> or <strong>"Stand"</strong>.<br>
+      5. If your total goes over 21, you <strong>bust</strong> and lose your bet.<br>
+      6. Dealer draws until 17+ and reveals the hidden card.<br>
+      7. Closest to 21 wins. If dealer busts, you win.<br>
+      8. Winning returns <strong>double your bet</strong>.
+    </p>
+
+    <p class="text-body">
+      <strong>♠ Blackjack:</strong><br>
+      A hand with an <strong>Ace (10)</strong> and a <strong>King (11)</strong>.<br>
+      <strong>Payout:</strong> 3:2
+    </p>
+  </div>
+</div>
+
+<h1 id="result-text"></h1>
+<div class="dealerplayer-container">
+  <span class="dealername">Dealer</span>
+  <span class="dealerscore" id="dealerscore">Dealer Score: 0</span>
+  <div class="dealer">
+    <img class="card card1" src=""/>
+    <img class="card card2" src="" />
+    <img class="card card3" id="card3" src="" width="100" style="display: none;" />
+  </div>
+  <span class="playername" id="playername">gfc</span>
+  <span class="playerscore" id="playerscore">Player Score: 0</span>
+  <div class="player">
+    <img class="card card1" src=""/>
+    <img class="card card2" src=""/>
+    <img class="card card3" id="card3" src="" width="100" style="display: none;" />
+  </div>
+</div>
+  <div class="container">
+    <div class="betamount-container">
+      <span class="total-amount" id="totalamount">Total Amount :</span>
+      <br>
+      <span class="bet-amount" id="betamount">Bet Amount : </span>
+    </div>
+    <div class="coins-container">
+      <img src="assets/5coin.svg" alt="coin of 5" class="coin" id="5coin" onclick="deductamount(5)">
+      <img src="assets/25coin.svg" alt="coin of 25" class="coin" id="25coin" onclick="deductamount(25)">
+      <img src="assets/75coin.svg" alt="coin of 75" class="coin" id="75coin" onclick="deductamount(75)">
+      <img src="assets/100coin.svg" alt="coin of 100" class="coin" id="100coin" onclick="deductamount(100)">
+    </div> 
+    <div class="bet-container">
+    <button class="button" id="deal-button" onclick="deal()">DEAL</button>
+    <button class="button" id="hit-button" onclick="hit()">HIT</button>
+    <button class="button" id="stand-button" onclick="stand()">STAND</button>
+    <button class="button" id="reset-button" onclick="cleardeal()">CLEAR DEAL</button>
+    </div>
+  </div>
+  <h1 id="message"></h1>
+  <audio id="music" src="assets/playful-days-291189.mp3" loop></audio>
+  <video id="winnervideo" style="display:none;">
+     <source src="assets/winner.mp4" type="video/mp4" >
+  </video>
+  <script src="index.js"></script>
+</body>
+</html>

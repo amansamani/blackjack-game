@@ -1,0 +1,1020 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),url(assets/patternpad-2025-04-13-23-13-56.svg);
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+#winnervideo{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 9999;
+}
+/* From Uiverse.io by alexruix */ 
+.rulebox {
+  display: none;
+  width: 40rem;
+  height: 30rem;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #2b1e38, #3e2c4f); /* retro card theme */
+  position: absolute;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow-y: auto;
+  color: #f0e9e0;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Internal card content */
+.card-details {
+  height: 100%;
+  display: grid;
+  gap: 1em;
+  color: #e0d4f7;
+}
+
+.text-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  color: #ffdf6c;
+  text-shadow: 1px 1px #000;
+}
+
+.text-body {
+  color: #e3e3e3;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.text-body strong {
+  color: #ff9f43;
+}
+
+.startgamebackground{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  z-index: 2;
+}
+.start-card {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  background: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: sans-serif;
+  z-index: 99999;
+}
+.start-card h2{
+  font-size: 32px;
+}
+#playerName{
+  margin-top: 4rem;
+}
+.start-button{
+  margin-top: 2rem;
+}
+.start-card input {
+  width: 90%;
+  padding: 10px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.start-card button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.start-card button:hover {
+  background: #45a049;
+}
+
+.header{
+    position: absolute;
+    gap: 10px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+#logo{
+   width: 80px;
+    height: 80px;
+}
+.nav-bar{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.rulebutton{
+    position: relative;
+    margin-right: 4rem;
+    padding: 5px 10px;
+    background-color: rgb(82, 82, 82);
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition-duration: .2s;
+}
+
+#checkboxInput {
+    display: none;
+  }
+  
+  .toggleSwitch {
+    right: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(82, 82, 82);
+    border-radius: 20px;
+    cursor: pointer;
+    transition-duration: .6s;
+  }
+  
+  .toggleSwitch::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    left: 5px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition-duration: .6s;
+    box-shadow: 5px 2px 7px rgba(8, 8, 8, 0.26);
+    border: 5px solid white;
+  }
+  
+  #checkboxInput:checked+.toggleSwitch::after {
+    transform: translateX(100%);
+    transition-duration: .6s;
+    background-color: white;
+  }
+  /* Switch background change */
+  #checkboxInput:checked+.toggleSwitch {
+    background-color: rgb(148, 118, 255);
+    transition-duration: .6s;
+  }
+  .toggleSwitch img {
+    position: absolute;
+    right: -32px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+
+  .sound-off {
+    display: none;
+  }
+  
+  #checkboxInput:checked + .toggleSwitch .sound-on {
+    display: block;
+  }
+  
+  #checkboxInput:checked + .toggleSwitch .sound-off {
+    display: none;
+  }
+  
+  #checkboxInput:not(:checked) + .toggleSwitch .sound-on {
+    display: none;
+  }
+  
+  #checkboxInput:not(:checked) + .toggleSwitch .sound-off {
+    display: block;
+  }
+  #result-text{
+    position: absolute;
+    top:19rem;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+  }
+.dealerplayer-container{
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 155px);
+  padding: 20px;
+  background-color: transparent;
+}
+.dealer{
+  left: 3rem;
+  position: relative;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;     
+  margin-top: 0rem;                                                                                                                                      
+}
+.dealer .card1 , .card2 , .card3{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;                                                                  
+  width: 140px;
+  height: 204px;
+  border-radius: 1rem;
+}
+.player{
+  left: 3rem;
+  position: relative;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;     
+  margin-top: 5rem;                                                                                                                                      
+}
+.player .card1 , .card2 , .card3{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;                                                                  
+  width: 140px;
+  height: 204px;
+  border-radius: 1rem;
+}
+#result-text{
+  position: absolute;
+  top:20rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-align: center;
+}
+.dealername{
+  position: absolute;
+  top: 20px;
+  left: 2rem;
+  padding: 12px 12px;
+  background-color: rgb(82, 82, 82);
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition-duration: .2s;
+}
+.dealerscore{
+    position: absolute;
+    top: 2rem; /* or adjust as needed */
+    right: 4rem; 
+    padding: 10px 10px;
+    background-color: rgb(82, 82, 82);
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition-duration: .2s;
+  }
+.playername{
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  padding: 12px 12px;
+  background-color: rgb(82, 82, 82);
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition-duration: .2s;
+}
+.playerscore{
+  position: absolute;
+  bottom: 2rem;
+  right: 4rem;
+  padding: 10px 10px;
+  background-color: rgb(82, 82, 82);
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition-duration: .2s;
+}
+.container{
+  width: 90vw;
+  background-color:rgb(50, 50, 50);
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  gap: 2.2rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.betamount-container{
+  top: 10px;
+  position: relative;
+}
+.bet-container{
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+  gap: 20px; 
+}
+.bet-container button{
+  padding: 5px 10px;
+  background-color: rgb(82, 82, 82);
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition-duration: .2s;
+}
+.bet-container button:hover{
+  background-color: rgb(148, 118, 255);
+}
+.coins-container{
+  gap: 2rem;
+  display: flex;
+  position: relative;
+  left: 19rem;
+}
+.coins-container img{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition-duration: .2s;
+}
+.coins-container img:hover{
+  transform: scale(1.4);
+}
+.coin-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.total-amount{
+  color: white;
+}
+.bet-amount{
+  color: white;
+}
+/* for mobile devices */
+@media (max-width:480px) {
+  .startgamebackground{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    z-index: 999;
+  }
+  .start-card {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 270px;
+    height: 300px;
+    padding: 20px;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: sans-serif;
+    z-index: 99999;
+  }
+
+  .rulebox{
+    width: 18rem;
+    height: 30rem; -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* iOS Safari */
+  }
+  .header{
+    width: 100vw;
+    height: 40px;
+    padding: 25px 10px;
+    z-index: 99;
+}
+#logo{
+   width: 52px;
+    height: 52px;
+}
+.nav-bar{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 10px 10px;
+}
+.rulebutton{
+    margin-top: .6rem;
+    margin-right: 1rem;
+    padding: 5px 5px;
+    border-radius: 6px;
+    font-size: 10px;
+}
+.toggleSwitch {
+  margin-top: .6rem;
+  right: 1rem;
+  width: 40px;
+  height: 15px;
+}
+.toggleSwitch img {
+  right: -22px; 
+  width: 20px;
+  height: 20px;
+}
+#result-text{
+  position: absolute;
+  top:16rem;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
+.dealerplayer-container{
+  width: 100vw;
+  height: 100vh;;
+  padding: 70px;
+  background-color: transparent;
+}
+.dealer{
+  left: 0;
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;     
+  margin-top: 3rem;                                                                                                                                      
+}
+.dealer .card1 , .card2 , .card3{                                                             
+  width: 100px;
+  height: 140px;
+  padding: 5px 5px;
+}
+.player{
+  left: 0;
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;     
+  margin-top: 2.5rem;                                                                                                                                      
+}
+.player .card1 , .card2 , .card3{  
+  width: 100px;
+  height: 140px;
+  padding: 5px 5px;
+}
+.dealername{
+  top: 4rem;
+  font-size: 16px;
+  padding: 10px 10px;
+}
+.dealerscore{
+  top: 4rem;
+  right: 2rem;
+  }
+  .playername {
+   position: relative;
+   top: 16rem;
+   left: -1.4rem;
+   font-size: 16px;
+   padding: 10px 10px;
+  }
+  .playerscore {
+  position: relative;
+   top: 16rem;
+   left: 8rem;
+  }
+  
+.container{
+  gap: 1rem;
+  padding: 130px 20px;
+  border-radius: 20px;
+}
+.betamount-container{
+  bottom: 20rem;
+  position: absolute;
+  display: flex;
+  gap: 2rem;
+}
+.betamount-container span {
+  margin: 0;
+  font-size: 18px;
+}
+.bet-container {
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 2px 2px;
+  font-size: 10px;
+}
+.bet-container button {
+  flex: 1 1 40%;
+  max-width: 50%;
+  font-size: 16px;
+}
+.bet-container button:hover{
+  background-color: rgb(148, 118, 255);
+}
+.coins-container{
+  gap: 1rem;
+  display: flex;
+  position: absolute;
+  left: 2rem;
+  bottom: 90px;
+}
+.coins-container img{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  left:1rem;
+  margin-bottom: 1rem;
+  transition-duration: .2s;
+}
+}
+/* Target iPhone 15 and similar */
+@media (max-width: 393px) {
+  /* Your responsive styles */
+  .dealerplayer-container{
+    width: 100vw;
+    height: 100vh;;
+    padding: 60px;
+    background-color: transparent;
+  }
+  .dealer{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: 3rem;                                                                                                                                      
+  }
+  .dealer .card1 , .card2 , .card3{                                                             
+    width: 90px;
+    height: 130px;
+    padding: 5px 5px;
+  }
+  .player{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: 1.8rem;                                                                                                                                      
+  }
+  .player .card1 , .card2 , .card3{  
+    width: 90px;
+    height: 130px;
+    padding: 5px 5px;
+  }
+  .dealername{
+    top: 4rem;
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+  .dealerscore{
+    top: 4rem;
+    right: 2rem;
+    }
+    .playername {
+     position: relative;
+     top: 12rem;
+     left: -1.4rem;
+     font-size: 16px;
+     padding: 10px 10px;
+    }
+    .playerscore {
+    position: relative;
+     top: 12rem;
+     left: 6rem;
+    }
+    
+  .container{
+    gap: 1rem;
+    padding: 95px 20px;
+    border-radius: 20px;
+  }
+  .betamount-container{
+    bottom: 20rem;
+    position: absolute;
+    display: flex;
+    gap: 2rem;
+  }
+  .betamount-container span {
+    margin: 0;
+    font-size: 15px;
+    padding: 2px 2px;
+  }
+  .bet-container {
+    position: absolute;
+    bottom: 6px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 2px 2px;
+    font-size: 10px;
+  }
+  .coins-container{
+    left: 3rem;
+  }
+  .coins-container img{
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  #result-text{
+    position: absolute;
+    top:24rem;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+  .dealerplayer-container{
+    width: 100vw;
+    height: 100vh;;
+    padding: 70px;
+    background-color: transparent;
+  }
+  .dealer{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: 4rem;                                                                                                                                      
+  }
+  .dealer .card1 , .card2 , .card3{                                                             
+    width: 160px;
+    height: 240px;
+    padding: 5px 5px;
+  }
+  .player{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: 2.5rem;                                                                                                                                      
+  }
+  .player .card1 , .card2 , .card3{  
+    width: 160px;
+    height: 240px;
+    padding: 5px 5px;
+  }
+  .dealername{
+    top: 6rem;
+    font-size: 22px;
+    padding: 10px 10px;
+  }
+  .dealerscore{
+    top: 6rem;
+    right: 1rem;
+    font-size: 22px;
+    }
+    .playername {
+     position: relative;
+     top: 20rem;
+     left: -1.4rem;
+     font-size: 16px;
+     padding: 10px 10px;
+     font-size: 22px;
+    }
+    .playerscore {
+    position: relative;
+     top: 20rem;
+     left: 28.5rem;
+     font-size: 22px;
+    }
+    
+  .container{
+    gap: 1rem;
+    padding: 130px 20px;
+    border-radius: 20px;
+  }
+  .betamount-container{
+    bottom: 20rem;
+    position: absolute;
+    display: flex;
+    gap: 7rem;
+  }
+  .betamount-container span {
+    margin: 0;
+    font-size: 26px;
+  }
+  .bet-container {
+    position: absolute;
+    bottom: 6px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 2px 2px;
+    font-size: 10px;
+  }
+  .bet-container button {
+    flex: 1 1 40%;
+    max-width: 50%;
+    font-size: 25px;
+  }
+  .bet-container button:hover{
+    background-color: rgb(148, 118, 255);
+  }
+  .coins-container{
+    gap: 3rem;
+    display: flex;
+    position: absolute;
+    left: 8rem;
+    bottom: 100px;
+  }
+  .coins-container img{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    left:1rem;
+    margin-bottom: 1rem;
+    transition-duration: .2s;
+  }
+}
+@media (min-width: 801px) and (max-width: 1024px) {
+  /* Styles for tablets */
+  #result-text{
+    position: absolute;
+    top:26.7rem;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+  .dealerplayer-container{
+    width: 100vw;
+    height: 100vh;;
+    padding: 60px;
+    background-color: transparent;
+  }
+  .dealer{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: 5rem;                                                                                                                                      
+  }
+  .dealer .card1 , .card2 , .card3{                                                             
+    width: 190px;
+    height: 290px;
+    padding: 5px 5px;
+  }
+  .player{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: .8rem;                                                                                                                                      
+  }
+  .player .card1 , .card2 , .card3{  
+    width: 190px;
+    height: 290px;
+    padding: 5px 5px;
+  }
+  .dealername{
+    top: 5rem;
+    font-size: 25px;
+    padding: 10px 10px;
+  }
+  .dealerscore{
+    font-size: 25px;
+    top: 5rem;
+    right: 1rem;
+    }
+    .playername {
+     position: relative;
+     top: 22rem;
+     left: -1.4rem;
+     font-size: 25px;
+     padding: 10px 10px;
+    }
+    .playerscore {
+    position: relative;
+    top: 22rem;
+    left: 30rem;
+    font-size: 25px;
+    }
+    
+  .container{
+    gap: 1rem;
+    padding: 120px 20px;
+    border-radius: 20px;
+  }
+  .betamount-container{
+    bottom: 40rem;
+    position: absolute;
+    display: flex;
+    gap: 8rem;
+  }
+  .betamount-container span {
+    margin: 0;
+    font-size: 25px;
+    padding: 2px 2px;
+  }
+  .bet-container {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .bet-container button {
+    padding: 10px 10px;
+    font-size: 30px;
+  }
+  .coins-container{
+    left: 8rem;
+  }
+  .coins-container img{
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .dealerplayer-container{
+    width: 100vw;
+    height: 100vh;;
+    padding: 60px;
+    background-color: transparent;
+  }
+  .dealer{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: 5rem;                                                                                                                                      
+  }
+  .dealer .card1 , .card2 , .card3{                                                             
+    width: 190px;
+    height: 290px;
+    padding: 5px 5px;
+  }
+  .player{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: .8rem;                                                                                                                                      
+  }
+  .player .card1 , .card2 , .card3{  
+    width: 190px;
+    height: 290px;
+    padding: 5px 5px;
+  }
+  .dealername{
+    top: 5rem;
+    left: 2rem;
+    font-size: 25px;
+    padding: 10px 10px;
+  }
+  .dealerscore{
+    font-size: 25px;
+    top: 5rem;
+    right: 5rem;
+    }
+    .playername {
+     position: relative;
+     top: 22rem;
+     left: 0rem;
+     font-size: 25px;
+     padding: 10px 10px;
+    }
+    .playerscore {
+    position: relative;
+    top: 22rem;
+    left: 39rem;
+    font-size: 25px;
+    }
+    
+  .container{
+    gap: 1rem;
+    padding: 160px 20px;
+    border-radius: 20px;
+  }
+  .betamount-container{
+    bottom: 40rem;
+    position: absolute;
+    display: flex;
+    gap: 9rem;
+  }
+  .betamount-container span {
+    margin: 0;
+    font-size: 35px;
+    padding: 2px 2px;
+  }
+  .bet-container {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .bet-container button {
+    padding: 10px 10px;
+    font-size: 40px;
+  }
+  .coins-container{
+    left: 8rem;
+  }
+  .coins-container img{
+    width: 120px;
+    height: 120px;
+  }
+}
+
