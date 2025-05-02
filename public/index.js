@@ -59,12 +59,12 @@ function startgame() {
 }
 
 window.onload = () => {
-  dealerCards[0].src = "./assets/0.webp";
-  dealerCards[1].src = "./assets/1.webp";
+  dealerCards[0].src = "assets/0.webp";
+  dealerCards[1].src = "assets/1.webp";
   dealerCards[2].style.display = "none";
 
-  playerCards[0].src = "./assets/0.webp";
-  playerCards[1].src = "./assets/1.webp";
+  playerCards[0].src = "assets/0.webp";
+  playerCards[1].src = "assets/1.webp";
   playerCards[2].style.display = "none";
 
   totalamount.innerText = "Total Amount: $1000";
@@ -247,11 +247,11 @@ function cleardeal() {
   dealbutton.disabled = false;
   hitbutton.disabled = true;
   standbutton.disabled = true;
-  dealerCards[0].src = "./assets/0.png";
-  dealerCards[1].src = "./assets/1.png";
+  dealerCards[0].src = "assets/0.webp";
+  dealerCards[1].src = "assets/1.webp";
   dealerCards[2].style.display = "none";
-  playerCards[0].src = "./assets/0.png";
-  playerCards[1].src = "./assets/1.png";
+  playerCards[0].src = "assets/0.webp";
+  playerCards[1].src = "assets/1.webp";
   playerCards[2].style.display = "none";
   playerscore.innerText = "Player Score: 0";
   dealerscore.innerText = "Dealer Score: 0";

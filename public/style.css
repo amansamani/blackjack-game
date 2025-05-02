@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),url(./assets/patternpad-2025-04-13-23-13-56.svg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),url(assets/patternpad-2025-04-13-23-13-56.svg);
     font-family: 'Poppins', sans-serif;
     background-color: #f2f2f2;
     color: #333;
@@ -701,5 +701,320 @@ button:disabled {
     height: 50px;
   }
 }
-
+@media (min-width: 600px) and (max-width: 800px) {
+  #result-text{
+    position: absolute;
+    top:24rem;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+  .dealerplayer-container{
+    width: 100vw;
+    height: 100vh;;
+    padding: 70px;
+    background-color: transparent;
+  }
+  .dealer{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: 4rem;                                                                                                                                      
+  }
+  .dealer .card1 , .card2 , .card3{                                                             
+    width: 160px;
+    height: 240px;
+    padding: 5px 5px;
+  }
+  .player{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: 2.5rem;                                                                                                                                      
+  }
+  .player .card1 , .card2 , .card3{  
+    width: 160px;
+    height: 240px;
+    padding: 5px 5px;
+  }
+  .dealername{
+    top: 6rem;
+    font-size: 22px;
+    padding: 10px 10px;
+  }
+  .dealerscore{
+    top: 6rem;
+    right: 1rem;
+    font-size: 22px;
+    }
+    .playername {
+     position: relative;
+     top: 20rem;
+     left: -1.4rem;
+     font-size: 16px;
+     padding: 10px 10px;
+     font-size: 22px;
+    }
+    .playerscore {
+    position: relative;
+     top: 20rem;
+     left: 28.5rem;
+     font-size: 22px;
+    }
+    
+  .container{
+    gap: 1rem;
+    padding: 130px 20px;
+    border-radius: 20px;
+  }
+  .betamount-container{
+    bottom: 20rem;
+    position: absolute;
+    display: flex;
+    gap: 7rem;
+  }
+  .betamount-container span {
+    margin: 0;
+    font-size: 26px;
+  }
+  .bet-container {
+    position: absolute;
+    bottom: 6px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 2px 2px;
+    font-size: 10px;
+  }
+  .bet-container button {
+    flex: 1 1 40%;
+    max-width: 50%;
+    font-size: 25px;
+  }
+  .bet-container button:hover{
+    background-color: rgb(148, 118, 255);
+  }
+  .coins-container{
+    gap: 3rem;
+    display: flex;
+    position: absolute;
+    left: 8rem;
+    bottom: 100px;
+  }
+  .coins-container img{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    left:1rem;
+    margin-bottom: 1rem;
+    transition-duration: .2s;
+  }
+}
+@media (min-width: 801px) and (max-width: 1024px) {
+  /* Styles for tablets */
+  #result-text{
+    position: absolute;
+    top:26.7rem;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+  .dealerplayer-container{
+    width: 100vw;
+    height: 100vh;;
+    padding: 60px;
+    background-color: transparent;
+  }
+  .dealer{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: 5rem;                                                                                                                                      
+  }
+  .dealer .card1 , .card2 , .card3{                                                             
+    width: 190px;
+    height: 290px;
+    padding: 5px 5px;
+  }
+  .player{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: .8rem;                                                                                                                                      
+  }
+  .player .card1 , .card2 , .card3{  
+    width: 190px;
+    height: 290px;
+    padding: 5px 5px;
+  }
+  .dealername{
+    top: 5rem;
+    font-size: 25px;
+    padding: 10px 10px;
+  }
+  .dealerscore{
+    font-size: 25px;
+    top: 5rem;
+    right: 1rem;
+    }
+    .playername {
+     position: relative;
+     top: 22rem;
+     left: -1.4rem;
+     font-size: 25px;
+     padding: 10px 10px;
+    }
+    .playerscore {
+    position: relative;
+    top: 22rem;
+    left: 30rem;
+    font-size: 25px;
+    }
+    
+  .container{
+    gap: 1rem;
+    padding: 120px 20px;
+    border-radius: 20px;
+  }
+  .betamount-container{
+    bottom: 40rem;
+    position: absolute;
+    display: flex;
+    gap: 8rem;
+  }
+  .betamount-container span {
+    margin: 0;
+    font-size: 25px;
+    padding: 2px 2px;
+  }
+  .bet-container {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .bet-container button {
+    padding: 10px 10px;
+    font-size: 30px;
+  }
+  .coins-container{
+    left: 8rem;
+  }
+  .coins-container img{
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .dealerplayer-container{
+    width: 100vw;
+    height: 100vh;;
+    padding: 60px;
+    background-color: transparent;
+  }
+  .dealer{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: 5rem;                                                                                                                                      
+  }
+  .dealer .card1 , .card2 , .card3{                                                             
+    width: 190px;
+    height: 290px;
+    padding: 5px 5px;
+  }
+  .player{
+    left: 0;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;     
+    margin-top: .8rem;                                                                                                                                      
+  }
+  .player .card1 , .card2 , .card3{  
+    width: 190px;
+    height: 290px;
+    padding: 5px 5px;
+  }
+  .dealername{
+    top: 5rem;
+    left: 2rem;
+    font-size: 25px;
+    padding: 10px 10px;
+  }
+  .dealerscore{
+    font-size: 25px;
+    top: 5rem;
+    right: 5rem;
+    }
+    .playername {
+     position: relative;
+     top: 22rem;
+     left: 0rem;
+     font-size: 25px;
+     padding: 10px 10px;
+    }
+    .playerscore {
+    position: relative;
+    top: 22rem;
+    left: 39rem;
+    font-size: 25px;
+    }
+    
+  .container{
+    gap: 1rem;
+    padding: 160px 20px;
+    border-radius: 20px;
+  }
+  .betamount-container{
+    bottom: 40rem;
+    position: absolute;
+    display: flex;
+    gap: 9rem;
+  }
+  .betamount-container span {
+    margin: 0;
+    font-size: 35px;
+    padding: 2px 2px;
+  }
+  .bet-container {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .bet-container button {
+    padding: 10px 10px;
+    font-size: 40px;
+  }
+  .coins-container{
+    left: 8rem;
+  }
+  .coins-container img{
+    width: 120px;
+    height: 120px;
+  }
+}
 
