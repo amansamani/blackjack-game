@@ -163,17 +163,23 @@ function stand() {
   }
 
   setTimeout(() => {
-    if (sumofdealer > sumofplayer && sumofdealer <= 21) {
-      resultText.innerText = "Dealer wins!";
-    } else if (sumofdealer === sumofplayer) {
-      resultText.innerText = "It's a tie!";
-      totalAmountValue += currentBet;
-    } else {
+    if (sumofplayer > 21) {
+      resultText.innerText = "You busted! Dealer wins!";
+    } else if (sumofdealer > 21) {
+      resultText.innerText = "Dealer busted! You win!";
+      totalAmountValue += currentBet * 2;
+      videoplay();
+    } else if (sumofplayer > sumofdealer) {
       resultText.innerText = "You won!";
       totalAmountValue += currentBet * 2;
       videoplay();
+    } else if (sumofplayer < sumofdealer) {
+      resultText.innerText = "Dealer wins!";
+    } else {
+      resultText.innerText = "It's a tie!";
+      totalAmountValue += currentBet;
     }
-
+  }, 1000);
     currentBet = 0;
     totalamount.innerText = `Total Amount: $${totalAmountValue}`;
     betamount.innerText = `Bet Amount: $0`;
