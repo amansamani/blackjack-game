@@ -162,25 +162,23 @@ function stand() {
     dealerCards[2].style.display = "block";
   }
 
-  setTimeout(() => {
-    if (sumofplayer > 21) {
-      resultText.innerText = "You busted! Dealer wins!";
-    } else if (sumofdealer > 21) {
-      resultText.innerText = "Dealer busted! You win!";
-      totalAmountValue += currentBet * 2;
-      videoplay();
-    } else if (sumofplayer > sumofdealer) {
-      resultText.innerText = "You won!";
-      totalAmountValue += currentBet * 2;
-      videoplay();
-    } else if (sumofplayer < sumofdealer) {
-      resultText.innerText = "Dealer wins!";
-    } else {
-      resultText.innerText = "It's a tie!";
-      totalAmountValue += currentBet;
-    }
-  }, 1000);
-
+setTimeout(() => {
+  if (sumofplayer > 21) {
+    resultText.innerText = "You busted! Dealer wins!";
+  } else if (sumofdealer > 21) {
+    resultText.innerText = "Dealer busted! You win!";
+    totalAmountValue += currentBet * 2;
+    videoplay();
+  } else if (sumofplayer > sumofdealer) {
+    resultText.innerText = "You won!";
+    totalAmountValue += currentBet * 2;
+    videoplay();
+  } else if (sumofplayer < sumofdealer) {
+    resultText.innerText = "Dealer wins!";
+  } else {
+    resultText.innerText = "It's a tie!";
+    totalAmountValue += currentBet;
+  }
     currentBet = 0;
     totalamount.innerText = `Total Amount: $${totalAmountValue}`;
     betamount.innerText = `Bet Amount: $0`;
@@ -191,7 +189,7 @@ function stand() {
     hitbutton.disabled = true;
     standbutton.disabled = true;
     resetbutton.disabled = false;
-  }, 500);
+  }, 1000);
 }
 
 function hit() {

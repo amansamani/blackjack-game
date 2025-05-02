@@ -179,19 +179,18 @@ function stand() {
       resultText.innerText = "It's a tie!";
       totalAmountValue += currentBet;
     }
-  }, 1000);
-    currentBet = 0;
-    totalamount.innerText = `Total Amount: $${totalAmountValue}`;
-    betamount.innerText = `Bet Amount: $0`;
-    fivedollars.disabled = true;
-    twentyfiveDollars.disabled = true;
-    seventyfiveDollars.disabled = true;
-    hundreadDollars.disabled = true;
-    hitbutton.disabled = true;
-    standbutton.disabled = true;
-    resetbutton.disabled = false;
-  }, 500);
-}
+      currentBet = 0;
+      totalamount.innerText = `Total Amount: $${totalAmountValue}`;
+      betamount.innerText = `Bet Amount: $0`;
+      fivedollars.disabled = true;
+      twentyfiveDollars.disabled = true;
+      seventyfiveDollars.disabled = true;
+      hundreadDollars.disabled = true;
+      hitbutton.disabled = true;
+      standbutton.disabled = true;
+      resetbutton.disabled = false;
+    }, 1000);
+  }
 
 function hit() {
   const playerCard3 = Math.floor(Math.random() * 10) + 2;
