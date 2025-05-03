@@ -470,7 +470,7 @@ button:disabled {
 }
 #result-text{
   position: absolute;
-  top:15rem;
+  top:17rem;
   font-size: 2rem;
   color: #fff;
   text-align: center;
@@ -481,6 +481,8 @@ button:disabled {
   padding: 70px;
 }
 .dealer{
+  position: relative;
+  display: flex;
   left: 0;
   gap: 1rem;
   margin-top: 3rem;                                                                                                                                      
@@ -491,6 +493,8 @@ button:disabled {
   padding: 5px 5px;
 }
 .player{
+  position: relative;
+  display: flex;
   left: 0;
   gap: 1rem;
   margin-top: 2.5rem;                                                                                                                                      
@@ -510,12 +514,14 @@ button:disabled {
   right: 2rem;
   }
   .playername {
+    position: relative;
    top: 16rem;
    left: -1.4rem;
    font-size: 16px;
    padding: 10px 10px;
   }
   .playerscore {
+    position: relative;
    top: 16rem;
    left: 8rem;
   }
@@ -525,12 +531,15 @@ button:disabled {
   border-radius: 20px;
 }
 .betamount-container{
+  position: absolute;
+  display: flex;
   bottom: 20rem;
   gap: 2rem;
 }
 .betamount-container span {
   margin: 0;
   font-size: 18px;
+  padding: 2px 2px;
 }
 .bet-container {
   position: absolute;
@@ -572,6 +581,13 @@ button:disabled {
 /* Target iPhone 15 and similar */
 @media (max-width: 393px) {
   /* Your responsive styles */
+  #result-text{
+    position: absolute;
+    top:15rem;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
   .dealerplayer-container{
     width: 100vw;
     height: 100vh;;
@@ -586,8 +602,8 @@ button:disabled {
     margin-top: 3rem;                                                                                                                                      
   }
   .dealer .card1 , .card2 , .card3{                                                             
-    width: 120px;
-    height: 180px;
+    width: 90px;
+    height: 120px;
     padding: 5px 5px;
   }
   .player{
@@ -599,8 +615,8 @@ button:disabled {
     margin-top: 1.8rem;                                                                                                                                      
   }
   .player .card1 , .card2 , .card3{  
-    width: 120px;
-    height: 180px;
+    width: 90px;
+    height: 120px;
     padding: 5px 5px;
   }
   .dealername{
@@ -614,17 +630,16 @@ button:disabled {
     }
     .playername {
      position: relative;
-     top: 16rem;
+     top: 12rem;
      left: -1.4rem;
      font-size: 16px;
      padding: 10px 10px;
     }
     .playerscore {
     position: relative;
-     top: 16rem;
-     left: 6rem;
+     top: 12rem;
+     left: 5rem;
     }
-    
   .container{
     gap: 1rem;
     padding: 95px 20px;
